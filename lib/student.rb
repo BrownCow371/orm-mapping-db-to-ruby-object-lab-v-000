@@ -48,7 +48,10 @@ class Student
     ninth
   end
 
-  def
+  def self.students_below_12th_grade
+    self.all.select{|student| student.grade < 12 }
+  end
+
   def self.create_table
     sql = <<-SQL
     CREATE TABLE IF NOT EXISTS students (
